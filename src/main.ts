@@ -1,7 +1,8 @@
 import { createApp } from "vue";
-import { createPinia } from "pinia";
 import App from "./App.vue";
 import router from "./router";
+// 状态管理器
+import pinia from "./store";
 // 样式重置
 import "normalize.css";
 const app = createApp(App);
@@ -19,6 +20,6 @@ import SvgIcon from "@/components/SvgIcon/index.vue"; // svg component
 import "@/assets/iconfont/iconfont.css";
 import "@/assets/iconfont/iconfont.js";
 app.component("svg-icon", SvgIcon);
-app.use(createPinia());
+app.use(pinia);
 app.use(router);
 app.mount("#app");
